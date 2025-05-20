@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Eventos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Evento</h1>
+    <form id="registroEvento">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <div id="error-nombre" class="error-message"></div>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+      <div id="error-correo" class="error-message"></div>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+      <div id="error-telefono" class="error-message"></div>
+
+      <fieldset>
+        <legend>Intereses:</legend>
+        <label><input type="checkbox" name="intereses" value="tecnología"> Tecnología</label>
+        <label><input type="checkbox" name="intereses" value="negocios"> Negocios</label>
+        <label><input type="checkbox" name="intereses" value="arte"> Arte</label>
+      </fieldset>
+      <div id="error-intereses" class="error-message"></div>
+
+      <fieldset>
+        <legend>Horario preferido:</legend>
+        <label><input type="radio" name="horario" value="mañana" required> Mañana (9:00 - 12:00)</label>
+        <label><input type="radio" name="horario" value="tarde"> Tarde (14:00 - 17:00)</label>
+        <label><input type="radio" name="horario" value="noche"> Noche (19:00 - 22:00)</label>
+      </fieldset>
+      <div id="error-horario" class="error-message"></div>
+
+      <label for="fecha">Fecha del evento:</label>
+      <input type="date" id="fecha" name="fecha" required>
+      <div id="error-fecha" class="error-message"></div>
+
+      <label for="hora">Hora preferida:</label>
+      <input type="time" id="hora" name="hora" required>
+      <div id="error-hora" class="error-message"></div>
+
+      <label for="archivo">Documento de identificación (opcional, máximo 2MB):</label>
+      <input type="file" id="archivo" name="archivo" accept=".pdf,.jpg,.png">
+      <div id="error-archivo" class="error-message"></div>
+
+      <button type="submit">Registrarse</button>
+    </form>
+  </div>
+
+  <script src="forms.js"></script>
+</body>
+</html>
